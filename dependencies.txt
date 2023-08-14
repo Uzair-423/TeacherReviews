@@ -2,6 +2,7 @@ express
 passport
 passport-local
 passport-local-mongoose
+express-session
 ejs
 mongoose
 dotenv
