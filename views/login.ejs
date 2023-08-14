@@ -1,28 +1,51 @@
 <%- include('partials/header') %>
 
 
-<div class="form-container">
-    <form action="/login" method="post">
-      <h1 class="h3 mb-3 fw-normal">Please Login</h1>
+<center>
+
+  <style>
+    .form-center-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Adjust as needed */
+    }
+    
+    .form-container {
+      width: 100%;
+      max-width: 400px; /* Adjust as needed */
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+    </style>
   
-      <div class="form-floating">
-        <input type="email" name="username" class="form-control email" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Email address</label>
-      </div>
+<div class="form-container">
+  <form action="/login" method="post">
+    <h3 class="h3 mb-3 fw-normal">Welcome</h3>
+
+    <div class="form-floating">
+      <input type="email" name="username" class="form-control email" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Email address</label>
+    </div>
+    
+    <div class="form-floating">
+      <input type="password" name="password" class="form-control password" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
+    <div class="row btn-container">
       
-      <div class="form-floating">
-        <input type="password" name="password" class="form-control password" id="floatingPassword" placeholder="Password">
-        <label for="floatingPassword">Password</label>
-      </div>
-      <div class="row btn-container">
-        
-        <button class="btn btn-primary submit-btn" type="submit">Login</button>
-        
-        
-      </div>
+      <button class="btn btn-primary submit-btn" type="submit">Login</button>
       
-    </form>
+      
+    </div>
+    
+  </form>
 </div>
+
+
+</center>
 
 
 
