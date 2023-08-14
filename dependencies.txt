@@ -1,0 +1,8 @@
+express
+passport
+passport-local
+passport-local-mongoose
+ejs
+mongoose
+
+nodemon - dev dependency
