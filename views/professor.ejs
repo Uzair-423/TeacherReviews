@@ -1,0 +1,30 @@
+<%- include ('partials/headerAuth') %>
+
+
+<div>
+    <h1><%=professor.name%></h1>
+    <p><%=professor.email %></p>
+    <p><%=professor.department %></p>
+    <p><%=professor.courses %></p>
+</div>
+
+<hr>
+
+<form action="/professor/<%=professor._id%>" method="post">
+    <textarea name="body" id="review" cols="100" rows="3">Add Review</textarea>
+    <button type="submit">Submit</button>
+</form>
+
+<% reviews.forEach((review)=>{ %>
+    <hr>
+    <div>
+        <p>Review: <%=review.body%></p>
+        <p>By: <%=review.userId.name%> <%= review.userId.major %> <%= review.userId.class %></p>
+    </div>
+<% }) %>
+
+
+
+
+
+<%- include ('partials/footer') %>

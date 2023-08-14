@@ -9,11 +9,13 @@ const app = express()
 
 const noAuthRouter = require('./routes/noAuth')
 const authRouter = require('./routes/auth')
+const adminRouter = require('./routes/admin')
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static('public'))
 app.set('view engine', 'ejs')
+
 
 // Authentication Middleware
 app.use(session({
@@ -37,6 +39,10 @@ mongoose.connect(process.env.MONGO_URI, {dbName:'teacher-rating'}).then(console.
 app.use('/', noAuthRouter)
 
 app.use('/', authRouter)
+
+app.use('/admin', adminRouter)
+
+
 
 app.listen(process.env.PORT, ()=>{
     console.log(`Server is running on port ${process.env.PORT}`)

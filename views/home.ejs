@@ -3,4 +3,17 @@
 
 <h1>Welcome <%=user%></h1>
 
+<div class="row">
+
+    <% professors.forEach((professor)=>{ %>
+        <div class="col-md-4">
+            <h3><a href="/professor/<%=professor._id%>"><%= professor.name %></a></h3>
+            <p><%= professor.courses %></p>
+        </div>
+    <% }) %>
+
+</div>
+
+
+
 <%- include('partials/footer') %>
