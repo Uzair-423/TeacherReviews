@@ -33,7 +33,7 @@ router.post('/signup', (req,res)=>{
         (err, user)=>{
             if(err){
                 console.log(err)
-                res.redirect('/signup')
+                res.render('signup', {error:err.message})
             }
             else{
                 res.redirect('/login')
